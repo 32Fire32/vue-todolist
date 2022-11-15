@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="app">
+
       <div class="container">
         <header>
             <div class="logo"></div>
@@ -28,8 +29,8 @@
             <div class="todo">
                 <ul>
                     <li v-for="(exer, index) in toDoExercises" >
-                        <span :class="{barred: exer.done === true}" @click="exer.done = true">{{ exer.text }}</span>
-                        <div class="delete" @click="exer.done = false">X</div>
+                        <span :class="{barred: exer.done === true}" @click="onOffBarred(index)">{{ exer.text }}</span>
+                        <div class="delete">X</div>
                     </li>
                 </ul>
             </div>

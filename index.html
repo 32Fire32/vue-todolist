@@ -17,7 +17,7 @@
             <div class="logo"></div>
             <div class="title">
                 <h1>Boolean Gym</h1>
-                <h3>To do Exercizes</h3>
+                <h3>To do Exercises <h3>
             </div>
         </header>
         <main>
@@ -27,7 +27,7 @@
             </form>
             <div class="todo">
                 <ul>
-                    <li v-for="(exer, index) in toDoExercises">
+                    <li v-for="(exer, index) in toDoExercises" :class="{barred: exer.done === true}" @click="exer.done = true">
                         {{ exer.text }}
                     </li>
                 </ul>

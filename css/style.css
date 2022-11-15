@@ -29,3 +29,7 @@ body {
 ul {
     list-style: none;
 }
+
+.barred {
+    text-decoration: line-through;
+}

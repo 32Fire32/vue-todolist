@@ -10,6 +10,13 @@ body {
     display: flex;
     background-color: bisque;
     color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
 }
 
 #app {
@@ -24,10 +31,43 @@ body {
     flex-direction: column;
     align-items: center;
     border: 5px solid black;
+    border-radius: 20px;
+}
+
+img {
+    width: 150px;
+    object-fit: cover;
+}
+
+form {
+    text-align: center;
+}
+
+input, button {
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
 }
 
 ul {
     list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 5px 0;
+}
+
+span {
+    margin: 10px 20px;
+}
+
+.todo {
+    padding: 20px;
 }
 
 .barred {

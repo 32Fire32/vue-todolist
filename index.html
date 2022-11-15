@@ -27,8 +27,9 @@
             </form>
             <div class="todo">
                 <ul>
-                    <li v-for="(exer, index) in toDoExercises" :class="{barred: exer.done === true}" @click="exer.done = true">
-                        {{ exer.text }}
+                    <li v-for="(exer, index) in toDoExercises" >
+                        <span :class="{barred: exer.done === true}" @click="exer.done = true">{{ exer.text }}</span>
+                        <div class="delete" @click="exer.done = false">X</div>
                     </li>
                 </ul>
             </div>

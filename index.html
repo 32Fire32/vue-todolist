@@ -30,7 +30,7 @@
                 <ul>
                     <li v-for="(exer, index) in toDoExercises" >
                         <span :class="{barred: exer.done === true}" @click="onOffBarred(index)">{{ exer.text }}</span>
-                        <div class="delete">X</div>
+                        <span class="delete" @click="del(index)">X</span>
                     </li>
                 </ul>
             </div>

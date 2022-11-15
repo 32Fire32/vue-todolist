@@ -41,9 +41,9 @@
         }
       },
 
-      delete(i){
-        console.log(i);
-        this.toDoExercises[i].splice(this.toDoExercises[i]);
+      del(i){
+        this.toDoExercises.splice(i, 1);
+        console.log(this.toDoExercises);
       }
     }
     

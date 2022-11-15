@@ -5,14 +5,30 @@
   createApp({
     data() {
       return {
-        message: 'hello vue',
-        toDoExercises : [
-          'Esercizi di Html', 
-          'Studiare la documentazione di Bootstrap', 
-          'Ripassare JS'
-        ],
+        newExerc: "",
+        toDoExercises: [
+          {
+              text: 'Riguardare Html',
+              done: false,
+          }, {
+              text: 'Ripassare la documentazione di Bootstrap',
+              done: false,
+          }, {
+              text: 'Studiare JS',
+              done: false,
+          }, 
+          ]
       }
-    }
-  }).mount('#app')
+    },
 
-  console.log(Vue.createApp);
+    methods: {
+      addExerc() {
+          const objNewExerc = {
+            text: this.newExerc,
+            done: false
+          }
+          this.toDoExercises.push(objNewExerc);
+          this.newExerc="";
+      }}
+
+  }).mount('#app')

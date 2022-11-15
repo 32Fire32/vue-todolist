@@ -21,14 +21,14 @@
             </div>
         </header>
         <main>
-            <form>
-                <input type="text" placeholder="Inserisci qui gli esercizi" required>
+            <form @submit.prevent="addExerc">
+                <input type="text" placeholder="Inserisci qui gli esercizi" v-model="newExerc" required>
                 <button type="submit">Aggiungi esercizi</button>
             </form>
             <div class="todo">
                 <ul>
-                    <li v-for="exer in toDoExercises">
-                        {{ exer }}
+                    <li v-for="(exer, index) in toDoExercises">
+                        {{ exer.text }}
                     </li>
                 </ul>
             </div>

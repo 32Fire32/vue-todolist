@@ -26,19 +26,19 @@
           const objNewExerc = {
             text: this.newExerc,
             done: false
-          }
+          };
           this.toDoExercises.push(objNewExerc);
           this.newExerc="";
       },
 
       onOffBarred(i){
-        // console.log('ciao');
-        // console.log(this.toDoExercises[i].done);
-        if(this.toDoExercises[i].done === false){
-          this.toDoExercises[i].done = true;
-        } else {
-          this.toDoExercises[i].done = false;
-        }
+        // if(this.toDoExercises[i].done === false){
+        //   this.toDoExercises[i].done = true;
+        // } else {
+        //   this.toDoExercises[i].done = false;
+        // }
+        // this.toDoExercises[i].done ? this.toDoExercises[i].done = false : this.toDoExercises[i].done = true;
+        this.toDoExercises[i].done = !this.toDoExercises[i].done; // <--- GOLD
       },
 
       del(i){

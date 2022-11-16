@@ -23,6 +23,10 @@ header {
     margin: auto;
 }
 
+input {
+    padding: 10px;
+}
+
 .container {
     width: 1000px;
     min-height: 400px;
